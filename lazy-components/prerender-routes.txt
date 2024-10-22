@@ -1,0 +1,2 @@
+/pageA
+/pageB

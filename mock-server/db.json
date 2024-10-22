@@ -1,0 +1,10 @@
+{
+  "pageA": {
+    "mgnl:template": "lazy-components:components/pageA",
+    "title": "This content should be rendered with PageA Component"
+  },
+  "pageB": {
+    "mgnl:template": "lazy-components:components/pageB",
+    "title": "This content should be rendered with PageB Component"
+  }
+}
