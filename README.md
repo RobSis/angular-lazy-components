@@ -13,12 +13,12 @@ $ npm run start
 $ cd lazy-components
 $ npm run prerender
 
-# prerender the app with the legacy (webpack) builder
+# prerender the app with the legacy (webpack) builder - works OK
 $ npm run legacy-prerender
 ```
 
-Both pages (`dist/lazy-components/browser/pageA.html` and `dist/lazy-components/browser/pageB.html`) should be pre-rendered correctly.
+In both cases, the both pages (`dist/lazy-components/browser/pageA/index.html` and `dist/lazy-components/browser/pageB/index.html`) should be pre-rendered correctly.
 
-However, using the new `application` builder, the pageB is not rendered, because it is lazily-loaded (see `dynamic-loader.component.ts`).
+However, using the new `application` builder, the pageB is not rendered, because it is lazily-loaded (see `dynamic-loader.ts`).
 
 Note: this issue only occurs when lazy-loading AND pre-rendering is used.
