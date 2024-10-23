@@ -67,6 +67,7 @@ export class DynamicLoaderComponent implements OnChanges, OnDestroy {
         (componentClassLoader as AsyncComponentLoader)
           .load()
           .then((componentClass) => {
+              // Root of the problem: this promise is never resolved when prerendering with the new angular builder
               return this.loadComponent(componentClass, this.child, content)
             }
           )
