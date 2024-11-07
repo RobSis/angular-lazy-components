@@ -1,8 +1,0 @@
-{
-  "devDependencies": {
-    "json-server": "0.17.4"
-  },
-  "scripts": {
-    "start": "json-server -p 8888 --routes routes.json db.json"
-  }
-}
