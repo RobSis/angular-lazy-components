@@ -1,16 +1,19 @@
 import {
   OnSameUrlNavigation,
-  PreloadAllModules,
   RouterFeatures,
   Routes,
   withEnabledBlockingInitialNavigation,
-  withPreloading,
   withRouterConfig
 } from '@angular/router';
 
 import { RootComponent } from './root.component';
 
 export const routes: Routes = [
+  {
+    // lazy-loading in Router - supported
+    path: 'pageC',
+    loadComponent: () => import('./components/pageC.component').then(m => m.PageCComponent)
+  },
   {
     path: '**',
     component: RootComponent,
@@ -23,8 +26,6 @@ const config = {
 };
 
 export const routerFeatures: RouterFeatures[] = [
-  withPreloading(PreloadAllModules), // <- comment this line for activate lazy load
-  // withHashLocation()
   withEnabledBlockingInitialNavigation(),
   withRouterConfig(config)
 ];

@@ -1,2 +1,2 @@
 /pageA
-/pageB
+/pageC

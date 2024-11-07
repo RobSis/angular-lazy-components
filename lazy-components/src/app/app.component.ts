@@ -11,6 +11,4 @@ import { RouterOutlet } from '@angular/router';
     </div>
   `
 })
-export class AppComponent {
-  title = 'lazy-components';
-}
+export class AppComponent { }
